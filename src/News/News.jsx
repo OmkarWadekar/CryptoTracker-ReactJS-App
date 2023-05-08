@@ -15,7 +15,7 @@ function News() {
   useEffect(() => {
     const loadNews = async () => {
       const response = await axios.get(
-        "https://newsapi.org/v2/everything?q=cryptocurrency&from=2023-04-04&sortBy=publishedAt&apiKey=bd6a67d58958405f87cea77eb1c60af3"
+        "https://newsapi.org/v2/everything?q=cryptocurrency&sortBy=publishedAt&apiKey=bd6a67d58958405f87cea77eb1c60af3"
       );
       setNews(response.data.articles);
     };
@@ -34,7 +34,7 @@ function News() {
               key={index}
               hoverable
               className="carddet"
-              style={{ width: "50%" }}
+              style={{ width: "70%" }}
               cover={<img alt="Image not found" src={item.urlToImage} />}
             >
               <Meta title={item.title} description={item.content} />
